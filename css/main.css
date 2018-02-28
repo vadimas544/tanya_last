@@ -1,0 +1,49 @@
+@font-face {
+    font-family: Helvetica;
+    src: url(../fonts/Helvetica-light.otf);
+}
+body{
+	height: 2000px;
+	width: 100%;
+	padding: 0px;
+}
+.logo{
+	height: 180px;
+	width: 100%;
+	background: url(../img/1.png) no-repeat center #fff;
+	border: 1px red solid;
+}
+nav{
+	height: 50px;
+	width: 100%;
+	background: #2D1214;
+}
+.nav-menu{
+	margin-left: 38%;
+}
+nav ul li{
+	/*padding: 20px;*/
+	float: left;
+	list-style-type: none;
+	padding: 20px;
+}
+nav ul li a{
+	text-decoration: none;
+	color: #fff;
+	font-family: Helvetica;
+	font-size: 14px;
+}
+nav ul li a:hover{
+	color:#CE9B8C;
+	text-decoration: none;
+}
+/*
+.first-menu{
+	color:#CE9B8C;
+}
+*/
+
+.active1{
+	color:#CE9B8C;
+}
+
