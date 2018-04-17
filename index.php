@@ -40,7 +40,7 @@
     <section>
       <div class="row">
         <div class="col-md-12">
-            <img class="img-responsive center-block img-rounded" src="img/2.jpg" alt="image"/>
+            <img class="img-responsive center-block img-rounded img_sec" src="img/2.jpg" alt="image"/>
         </div>
       </div>
       <div class="wrapper">
@@ -173,6 +173,37 @@
               </a>
           </div>
         </div>
+        <div class="section3">
+        	<div class="row">
+        		<div class="col-md-6 col-md-offset-3">
+        			<h1>Get in Touch</h1>
+        			<img class="img-responsive" src="img/2.jpg" alt="Photo">
+        			<p>tatjana19rjabokon@gmail.com<br />0938919595</p>
+        			<form action="" method="post">
+        				<div class="form-group">
+        					<div class="col-md-6">
+        							<input type="text" class="form-control" width="50" placeholder="Name*" name="name"><br />
+        							<input type="email" class="form-control" placeholder="Email*" name="email"><br />
+        							<input type="text" class="form-control" name="subject" placeholder="Subject"><br />	
+        						<div class="form-group">
+      								<textarea class="form-control" rows="5" id="comment"></textarea>
+    							</div>
+        						<br />
+        						<input type="submit" class="btn btn-secondary" name="submit" value="Send">
+        					</div>
+        				</div>
+        			</form>
+        		</div>
+        	</div>
+        </div>
+        <footer>
+        	<div class="row">
+        		<div class="col-md-6 col-md-offset-3 text-center">
+        			<h5>0938919595</h5>
+        			<h5>©2018 by Bright paints. Proudly created with Wix.com</h5>
+        		</div>
+        	</div>
+        </footer>
   </div>
   
     
