@@ -170,103 +170,16 @@ section h5{
     line-height: 64px;
     word-spacing: 3px;
 }
-/*
-.sec1_1 h3{
-    margin-top: 230px;
-    font-family: Bodoni;
-    font-size: 32px;
-    font-weight: 100;
-    color: #c52c3c;
-    line-height: 45px;
-}
-.sec1_1 h4{
-    margin-top: 10px;
-    font-family: Playfair;
-    font-size: 20px;
-    font-weight: 100;
-    color: #000;
-    line-height: 35px;
-}
-.sec1_1 a{
-    display: inline-block;
-    border: 1px solid #000;
-    font-family: AvenirLight;
-    font-size: 18px;
-    padding: 15px 25px;
-    margin-top: 30px;
-    text-decoration: none;
-    color: #000;
-}
-*/
 .sec1_1 a:hover{
     background-color: #311012;
     color: #fff;
 }
 .sec1_1{
 }
-/*
-.sec2{
-    height: 100%;
-    display: block;
-}
-/*
-.sec2 h3{
-    font-family: Bodoni;
-    font-size: 32px;
-    font-weight: 100;
-    color: #c52c3c;
-    line-height: 45px;
-}
-.sec2 h4{
-    margin-top: 10px;
-    font-family: Playfair;
-    font-size: 20px;
-    font-weight: 100;
-    color: #000;
-    line-height: 35px;
-}
-.sec2 a{
-    display: inline-block;
-    border: 1px solid #000;
-    font-family: AvenirLight;
-    font-size: 18px;
-    padding: 15px 25px;
-    margin-top: 30px;
-    text-decoration: none;
-    color: #000;
-}
-*/
 .sec2 a:hover{
     background-color: #311012;
     color: #fff;
 }
-/*
-.sec3 h3{
-    font-family: Bodoni;
-    font-size: 32px;
-    font-weight: 100;
-    color: #c52c3c;
-    line-height: 45px;
-}
-.sec3 h4{
-    margin-top: 10px;
-    font-family: Playfair;
-    font-size: 20px;
-    font-weight: 100;
-    color: #000;
-    line-height: 35px;
-}
-.sec3 a{
-    display: inline-block;
-    border: 1px solid #000;
-    font-family: AvenirLight;
-    font-size: 18px;
-    padding: 15px 25px;
-    margin-top: 30px;
-    text-decoration: none;
-    color: #000;
-}
-*/
 .sec3 a:hover{
     background-color: #311012;
     color: #fff;
@@ -356,4 +269,46 @@ section h5{
 }
 .sec3_form{
     padding-left: -15px;
+}
+.shop-image img{
+    width: 110%;
+    height: 110%;
+}
+.shop-item{
+    margin-top: 20px;
+}
+.item{
+    position: relative;
+    width: 90%;
+    margin-top: 10px;
+}
+.overlay {
+  position: absolute;
+  top: 80%;
+  left: 0%;
+  background-color: #ccc;
+  overflow: hidden;
+  width: 110%;
+  height: 20%;
+  -webkit-transform:scale(0);
+  transition: .5s ease;
+}
+.item:hover .overlay {
+  transform: scale(1);
+}
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
+footer{
+    height: 200px;
+    width: 100%;
+    background: #ccc;
+    margin-top: 20px;
 }

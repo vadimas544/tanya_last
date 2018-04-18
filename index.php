@@ -21,9 +21,9 @@
         <div id="mainmenu">
             <ul>
             <li class="active1"><a class="active1" href="#"> Home </a></li>
-            <li><a href="#"> Shop </a></li>
-            <li><a href="#"> Book online </a></li>
-            <li><a href="#"> Blog </a></li>
+            <li><a href="/route.php?id=shop"> Shop </a></li>
+            <li><a href="/route.php?id=book"> Book online </a></li>
+            <li><a href="/route.php?id=blog"> Blog </a></li>
             </ul>
         </div>
             <header>
