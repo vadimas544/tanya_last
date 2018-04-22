@@ -125,6 +125,7 @@ header img{
     max-width: 910px;
     height: auto;
     margin: 0 auto;
+    padding-left: 5px;
 }
 .img_sec{
     padding-top: 50px;
@@ -277,7 +278,7 @@ section h5{
 .shop-item{
     margin-top: 20px;
 }
-.item{
+.item-shop{
     position: relative;
     width: 90%;
     margin-top: 10px;
@@ -293,7 +294,7 @@ section h5{
   -webkit-transform:scale(0);
   transition: .5s ease;
 }
-.item:hover .overlay {
+.item-shop:hover .overlay {
   transform: scale(1);
 }
 .text {

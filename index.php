@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/animate.css" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome.min.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
@@ -27,23 +28,23 @@
             </ul>
         </div>
             <header>
-      <div class="row">
+          <div class="row">
             <div class="col-md-12">
-          <div class="header-logo text-center">
+          <div class="header-logo text-center wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s">
             <h1>Welcome to<br /> Bright<br /> paints</h1>
             <h3>Exactly What You Need</h3>
             <a class="transition" href="#">Contact</a>
           </div>
             </div>
           </div>
-    </header>
+          </header>
     <section>
       <div class="row">
         <div class="col-md-12">
             <img class="img-responsive center-block img-rounded img_sec" src="img/2.jpg" alt="image"/>
         </div>
       </div>
-      <div class="wrapper">
+      <div class="wrapper wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">
         <div class="row">
           <h3>Our Story</h3>  
         </div>
@@ -67,7 +68,7 @@
           </div>
           <div class="sec1_1">
             <div class="row">
-              <div class="col-md-6 text-center text_sec">
+              <div class="col-md-6 text-center text_sec wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">
                 <h3 class="section_h3">Customer Support</h3>
                 <h4 class="section_h4">Next Level Service</h4>
                 <a class="transition section_a" href="#">Get in touch</a>
@@ -79,7 +80,7 @@
           </div>
           <div class="sec2">
           <div class="row">
-               <div class="col-md-6 col-md-push-6 text-center text_sec">
+               <div class="col-md-6 col-md-push-6 text-center text_sec wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">
                   <h3 class="section_h3">Delivery</h3>
                   <h4 class="section_h4">Here For You</h4>
                   <a class="transition section_a" href="#">Get in touch</a>
@@ -91,7 +92,7 @@
           </div>
            <div class="sec3">
             <div class="row">
-              <div class="col-md-6 text-center text_sec">
+              <div class="col-md-6 text-center text_sec wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">
                   <h3 class="section_h3">Customer Support</h3>
                   <h4 class="section_h4">Next Level Service</h4>
                   <a class="transition section_a" href="#">Get in touch</a>
@@ -167,16 +168,16 @@
                   </div>
             </div>
           </div>
-             <a href="#itemscarousel" class="carousel-control left" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span>
+             <a href="#itemscarousel" class="carousel-control left" data-slide="next"><span class="glyphicon glyphicon-chevron-left"></span>
              </a>
-              <a href="#itemscarousel" class="carousel-control right" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span>
+              <a href="#itemscarousel" class="carousel-control right" data-slide="prev"><span class="glyphicon glyphicon-chevron-right"></span>
               </a>
           </div>
-        </div>
+      </div>
         <div class="section3">
         	<div class="row">
         		<div class="col-md-6 col-md-offset-3">
-        			<h1>Get in Touch</h1>
+        			<h1 class="wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">Get in Touch</h1>
         			<img class="img-responsive" src="img/2.jpg" alt="Photo">
         			<p>tatjana19rjabokon@gmail.com<br />0938919595</p>
         			<form action="" method="post">
@@ -208,6 +209,10 @@
   
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="js/bootstrap.min.js"></script>
   <!--
