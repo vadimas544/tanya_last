@@ -16,19 +16,25 @@
           </header>
     <section>
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 col-sm-12">
             <img class="img-responsive center-block img-rounded img_sec" src="img/2.jpg" alt="image"/>
         </div>
       </div>
-      <div class="wrapper wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">
+      <div class="wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">
         <div class="row">
-          <h3>Our Story</h3>  
+        	<div class="col-md-8 col-md-offset-2">
+          		<h3>Our Story</h3>
+          	</div>  
         </div>
         <div class="row">
+       	<div class="col-md-8 col-md-offset-2">
           <h1>About</h1>
         </div>
+        </div>
         <div class="row">
-          <h5>Since being established in 2000, Bright paints has been known for an unparalleled commitment to customer <br />satisfaction. It’s this standard of excellence that has provided the impetus for us to grow into the business we <br />are today. For more information about the products and services we provide, reach out today.</h5>
+        	<div class="col-md-8 col-md-offset-2">	
+         	 <h5>Since being established in 2000, Bright paints has been known for an unparalleled commitment to customer <br />satisfaction. It’s this standard of excellence that has provided the impetus for us to grow into the business we <br />are today. For more information about the products and services we provide, reach out today.</h5>
+         	</div>
         </div>
       </div>
     </section>
@@ -36,7 +42,7 @@
           <div class="sec1">
             <div class="wrapper">
               <div class="row">
-                <div class="col-md-12 wrapper">
+                <div class="col-md-8 col-md-offset-2 text-center">
                   <p>Bright paints Services</p>
                 </div>
               </div>
