@@ -119,14 +119,17 @@ header img{
     width: 940px;
     height: 529px;
 }
+/*
 .wrapper{
-    /*max-width: 910px;*/ 
-    height: auto;
-    margin: 0 auto;
-    padding-left: 5px;
+    max-width: 942px; 
+    /*margin: 0 auto;
 }
+*/
 .img_sec{
     padding-top: 50px;
+}
+.text2{
+  width: 125%; 
 }
 section h3{
     margin-top: 10px;
@@ -341,4 +344,15 @@ footer{
   .cart{
     margin-left: -40px;
   }
+}
+#block-tovar-grid > ul{
+  margin-left: 20px; 
+}
+#block-tovar-grid > li{
+  /*border: 1px solid red;*/
+  width: 45%;
+  height: 50%;
+  margin-left: 34px;
+  float: left;
+  list-style-type: none;
 }

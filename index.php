@@ -22,17 +22,17 @@
       </div>
       <div class="wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">
         <div class="row">
-        	<div class="col-md-8 col-md-offset-2">
-          		<h3>Our Story</h3>
+        	<div class="col-lg-10 col-lg-offset-1 col-md-8 col-md-offset-2 text-center">
+          		<h3 class="text-center">Our Story</h3>
           	</div>  
         </div>
         <div class="row">
-       	<div class="col-md-8 col-md-offset-2">
+       	<div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 text-center">
           <h1>About</h1>
         </div>
         </div>
         <div class="row">
-        	<div class="col-md-8 col-md-offset-2">	
+        	<div class="col-md-10 col-md-offset-1 text-center">	
          	 <h5>Since being established in 2000, Bright paints has been known for an unparalleled commitment to customer <br />satisfaction. It’s this standard of excellence that has provided the impetus for us to grow into the business we <br />are today. For more information about the products and services we provide, reach out today.</h5>
          	</div>
         </div>
