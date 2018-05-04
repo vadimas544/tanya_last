@@ -1,33 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/animate.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/fontawesome.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <link  href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"> 
-  </head>
+<?php
+  session_start();
+  require_once('inc/header.php');
+?>
 
-  <body>
-	<div class="container-fluid">
-		<div class="row">
-            <div class="col-md-12">
-                <div class="logo">
-                </div>
-            </div>
-    </div><!-- end logo-->
-        <div id="mainmenu">
-            <ul>
-            <li class="active1"><a class="active1" href="#"> Home </a></li>
-            <li><a href="/route.php?id=shop"> Shop </a></li>
-            <li><a href="/route.php?id=book"> Book online </a></li>
-            <li><a href="/route.php?id=blog"> Blog </a></li>
-            </ul>
-        </div>
-            <header>
+      <header>
           <div class="row">
             <div class="col-md-12">
           <div class="header-logo text-center wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s">
@@ -180,14 +156,20 @@
         			<h1 class="wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">Get in Touch</h1>
         			<img class="img-responsive" src="img/2.jpg" alt="Photo">
         			<p>tatjana19rjabokon@gmail.com<br />0938919595</p>
-        			<form action="" method="post">
+              <?php 
+                if(isset($_SESSION['message'])){
+                  echo $_SESSION['message'];
+                  unset($_SESSION['message']);
+                }
+              ?>
+        			<form action="/inc/feedback.php" method="post">
         				<div class="form-group">
         					<div class="col-md-6">
         							<input type="text" class="form-control" width="50" placeholder="Name*" name="name"><br />
         							<input type="email" class="form-control" placeholder="Email*" name="email"><br />
         							<input type="text" class="form-control" name="subject" placeholder="Subject"><br />	
         						<div class="form-group">
-      								<textarea class="form-control" rows="5" id="comment"></textarea>
+      								<textarea class="form-control" rows="5" id="comment" name="text"></textarea>
     							</div>
         						<br />
         						<input type="submit" class="btn btn-secondary" name="submit" value="Send">
@@ -197,42 +179,5 @@
         		</div>
         	</div>
         </div>
-        <footer>
-        	<div class="row">
-        		<div class="col-md-6 col-md-offset-3 text-center">
-        			<h5>0938919595</h5>
-        			<h5>©2018 by Bright paints. Proudly created with Wix.com</h5>
-        		</div>
-        	</div>
-        </footer>
-  </div>
+<?php require_once('inc/footer.php'); ?>
   
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script>
-      new WOW().init();
-    </script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-  <!--
-    <script type="text/javascript">
-      //Allows bootstrap carousels to display 3 items per page rather than just one
-$('.carousel.carousel-multi .item').each(function () {
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
-
-  if (next.next().length > 0) {
-    next.next().children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
-  }
-  else {
-    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
-});
-    </script>
-  -->
-  </body>
-</html>

@@ -22,12 +22,6 @@ body{
 	padding: 0px;
     background-color: #FFFFFF;
 }
-.logo{
-	height: 100px;
-	width: 100%;
-	background: url(../img/1.png) no-repeat center #fff;
-	/*border: 1px red solid;*/
-}
 *, *::after, *::before {
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -37,47 +31,51 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
-#mainmenu {
-background: #311012;
-position: relative;
-overflow:hidden;
-height:40px;
-margin:30px 0
+.logo{
+  height: 100px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-top: 30px;
 }
-#mainmenu ul {
-list-style:none;
-margin:0;
-padding:0;
-position: relative;
-left:50%;
-float:left;
-font:14px Helvetica, sans-serif;
-height:40px
+.menu{
+  background-color: #311012;
+  height: 60px;
 }
-#mainmenu ul li {
-position:relative;
-left:-50%;
-float:left;
-margin:0 10px;
-height:40px
+.mainmenu{
+  width: 70%;
+  margin: 0 auto;
 }
-#mainmenu ul li a {
-color: #fff;
-display:block;
-text-decoration:none;
-padding:0 15px;
-line-height: 40px;
+nav li{
+  display: inline-block;
 }
-#mainmenu ul li a:hover {
-color:#BA8D80; 
+nav a{
+  display: block;
+  text-decoration: none;
+  padding: 15px;
+  color: #fff;
 }
-.mainmenu ul li a.first-word{
-    color: #BA8D80;
+nav a:hover{
+  color: #B88B7F;
+  text-decoration: none;
+}
+nav a:focus{
+  color: #B88B7F;
+  text-decoration: none;
+}
+.menu-trigger{
+  text-align: center;
+  display: none;
+}
+
+.cart > a{
+  display: block;
+  color: #fff;
+  margin-top: 16px;
 }
 header{
     background: url(../img/1_new.jpg) no-repeat center top;
     height: 702px;
-    margin-top: -30px;
+    /*margin-top: -30px;*/
 }
 .header-logo h1{
     margin-top: 100px;
@@ -311,5 +309,36 @@ footer{
     height: 200px;
     width: 100%;
     background: #ccc;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+@media screen and (max-width: 575px){
+  nav{
+    width: 100%;
+  }
+  nav li{
+    display: block;
+    width: 174%;
+    text-align: center;
+    background-color: #B88B7F;
+    margin-left: -37%;
+    margin-top: 0px;
+  }
+  nav ul{
+    display: none;
+  }
+  nav a{
+    /*border-bottom: 1px solid #000;*/
+  }
+  nav a:hover{
+    color: #fff;
+    text-decoration: none;
+  }
+  .menu-trigger{
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .cart{
+    margin-left: -40px;
+  }
 }
