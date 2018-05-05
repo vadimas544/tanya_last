@@ -23,14 +23,17 @@
 ?>
 	<div class="container-fluid">
 		<div class="row">
-			<div class="col-md-10 col-md-offset-1 text-center">
+			<div class="col-md-10 col-md-offset-1">
 				
-			<h3 text-center>Виды трусов</h1>
+			<h3 class="text-center">Виды трусов</h1>
 				<ul id="block-tovar-grid">
 					<?php
 						while($row = mysqli_fetch_assoc($result)) {
 		        echo '
-		        <li><a href="../route.php?id=item_1"><img src = ' . $row["image"] .' class="block-center" width=60% height=60%></a>'.'<p>'.$row["title"].'</p></li>';
+		        <li class="text-center"><a href="../route.php?id=item_1"><img src ='.$row["image"].' width=60% height=60%></a>'.'<p>'.$row["title"].'</p>
+				<p>Цена</p>
+				<button type="button" class="btn btn-success">Купить</button>
+		        </li>';
 		    	}
 					?>
 				</ul>

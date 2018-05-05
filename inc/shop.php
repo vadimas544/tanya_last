@@ -11,7 +11,7 @@
 						<div class="item-shop">
 							<a href="../route.php?id=panties"><img src="../img/shop1.jpg" alt="shop" class="image"></a>
 						  		<div class="overlay text-center">
-   									<div class="text">Panties</div>
+   									<div class="text">Трусняки</div>
  								 </div>
 						</div>
 					</div>
