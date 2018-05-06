@@ -32,14 +32,17 @@ margin: 0;
 padding: 0;
 }
 .logo{
+    /*margin: 0 auto;*/
   height: 100px;
-  background-position: center center;
-  background-repeat: no-repeat;
-  margin-top: 30px;
+  width: 100%;
+    padding-top: 20px;
+  /*background: url(../img/1.png) no-repeat center #fff;*/
+  /*border: 1px red solid;*/
 }
 .menu{
   background-color: #311012;
   height: 60px;
+  margin-top: 20px;
 }
 .mainmenu{
   width: 70%;

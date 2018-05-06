@@ -13,13 +13,13 @@
 
   <body>
 	<div class="container-fluid">
-        <div class="row">
-            <div class="col-md-2 col-md-offset-5 text-center">
-                <div class="logo">
-                    <a href="/index.html"><img src="img/1.png"></a>
-                </div>
+            <div class="row">
+            <div class="col-md-4 col-md-offset-4 text-center">
+                <div class="logo text-center">
+                <a href=""><img src="../img/1.png" alt="Photo" /></a> 
+                </div> 
             </div>
-        </div>
+        </div><!-- end logo-->
         <div class="menu">
         <div class="row">
         <div class="col-md-8 col-sm-8 col-sm-offset-2 col-md-offset-2 col-xs-10 col-xs-offset-1">
