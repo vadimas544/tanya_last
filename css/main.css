@@ -315,7 +315,7 @@ footer{
     height: 200px;
     width: 100%;
     background: #ccc;
-    margin-top: 10px;
+    margin-top: 200px;
 }
 @media screen and (max-width: 575px){
   nav{
@@ -358,4 +358,144 @@ footer{
   margin-left: 34px;
   float: left;
   list-style-type: none;
+}
+#block-step{
+  height: 70px;
+  border-bottom: 1px solid #ccc;
+}
+#block-step > p{
+  font: 19px sans-serif;
+  margin-top: 8px;
+  margin-left: 15px;
+  position: absolute;
+}
+#block-step > a{
+  position: absolute;
+  border: 1px solid #ccc;
+  font: bold 13px sans-serif;
+  padding: 4px 7px;
+  margin-top: 5px;
+  margin-left: 700px;
+  text-decoration: none;
+  color: white;
+  background-color: #e2e2e2;
+  border-radius: 5px; 
+}
+#name-step{
+  height: 30px;
+}
+#name-step li{
+  float: left;
+  margin-left: 10px;
+  margin-top: 10px;
+  list-style-type: none;
+}
+#name-step a{
+  color: blue;
+  font: bold 14px sans-serif;
+  text-decoration: none;
+}
+#name-step a.active_link{
+  color: green;
+  font: bold 14px sans-serif;
+  border-bottom: 1px dashed green;
+}
+#header-list-cart{
+  height: 30px;
+  border-bottom: 1px solid #f2f2f2;
+}
+#header-list-cart > div{
+  float: left;
+  margin-left: 5px;
+  text-align: center;
+  font: bold 13px sans-serif;
+  color: #6d6d6d;
+  margin-top: 7px;
+}
+#head1{
+  width: 130px;
+}
+#head2{
+  width: 400px;
+}
+#head3{
+  width: 55px;
+}
+#head4{
+  width: 140px;
+}
+.block-list-cart{
+  border: 1px solid black;
+  height: 130px;
+}
+.block-list-cart > div{
+  float: left;
+  margin-left: 5px;
+}
+.img-cart{
+  width: 130px;
+  height: 125px;
+}
+.title-cart{
+  width: 400px;
+  height: 125px; 
+}
+.count-cart{
+  width: 55px;
+  height: 125px;
+}
+.price-product{
+  width: 140px;
+  height: 125px;
+}
+.delete-cart{
+  height: 125px;
+}
+.title-cart > p{
+  margin-top: 15px;
+
+}
+.title-cart > p > a{
+  font: 15px sans-serif;
+}
+.title-cart > p > a:hover{
+  text-decoration: none;
+}
+.input-count-style{
+  margin-top: 31px;
+}
+.input-count-style > li{
+  list-style-type: none;
+}
+.input-count-style input{
+  text-align: center;
+  border: 1px solid black;
+  width: 32px;
+  height: 22px;
+  font: 15px sans-serif;
+  border-radius: 5px;
+}
+.input-count-style > p{
+  cursor: pointer;
+  font: 15px sans-serif;
+  margin: 1px;
+}
+.price-product p{
+  margin-left: 15px;
+  margin-top: 65px;
+  font: bold 18px sans-serif;
+}
+.price-product h5{
+  position:   absolute;
+  font: bold 13px sans-serif;
+  margin-top: 42px;
+  margin-left: 15px; 
+}
+.delete-cart img{
+  margin-left: 50px;
+}
+#bottom-cart-line{
+  margin-top: 20px;
+  width: 1431px;
+  border-bottom: 2px solid grey; 
 }
