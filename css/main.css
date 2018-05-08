@@ -22,6 +22,7 @@ body{
 	padding: 0px;
     background-color: #FFFFFF;
 }
+/*
 *, *::after, *::before {
 -webkit-box-sizing: border-box;
 -moz-box-sizing: border-box;
@@ -31,6 +32,7 @@ box-sizing: border-box;
 margin: 0;
 padding: 0;
 }
+*/
 .logo{
     /*margin: 0 auto;*/
   height: 100px;
@@ -317,6 +319,47 @@ footer{
     background: #ccc;
     margin-top: 200px;
 }
+.cart-top{
+  margin-left: -56px;
+}
+.title-cart
+{
+  margin-top: 10px;
+}
+#cart-content{
+  margin-top: 20px;
+}
+#cart-content li{
+  float: left;
+  list-style-type: none;
+}
+.step{
+  margin-top: 10px;
+  margin-left: -15px;
+}
+.reset{
+  margin-top: 10px;
+}
+#cart-content a.active_link{
+  color: green;
+  font: bold 14px sans-serif;
+  border-bottom: 1px dashed green;
+}
+.count-cart li{
+  margin-top: 10px;
+  list-style-type: none;
+}
+.input-count-style input{
+  text-align: center;
+  border: 1px solid #ccc;
+  width: 32px;
+  height: 22px;
+  font: 15px sans-serif;
+}
+.delete-cart{
+  margin-top: 20px;
+}
+
 @media screen and (max-width: 575px){
   nav{
     width: 100%;
@@ -344,15 +387,17 @@ footer{
     margin-bottom: 10px;
     width: 100%;
   }
+
   .cart{
     margin-left: -40px;
   }
+  /*
 }
 #block-tovar-grid > ul{
   margin-left: 20px; 
 }
 #block-tovar-grid > li{
-  /*border: 1px solid red;*/
+  /*border: 1px solid red;
   width: 45%;
   height: 50%;
   margin-left: 34px;
@@ -499,3 +544,4 @@ footer{
   width: 1431px;
   border-bottom: 2px solid grey; 
 }
+*/

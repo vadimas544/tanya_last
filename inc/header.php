@@ -37,7 +37,7 @@
         </div>
         <div class="col-md-2 col-sm-2 col-xs-1">
             <div class="cart">
-                <a href="../cart.php?action=oneclick"><i class="fas fa-cart-arrow-down"></i></a>
+                <a href="../new_cart.php?action=oneclick"><i class="fas fa-cart-arrow-down"></i></a>
             </div>
         </div>
         </div>
