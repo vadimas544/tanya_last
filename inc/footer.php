@@ -15,6 +15,22 @@
     <script>
       new WOW().init();
     </script>
+    <script>
+      $('.class-to-cart').click(function(){
+          var tid = $(this). attr("tid");
+
+          $.ajax({
+            type: "POST",
+            url: "addtocart.php";
+            data: "id="+tid,
+            dataType: "html",
+            cache: false,
+            success: function(data){
+              loadcart();
+            }
+          });
+      });
+    </script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="js/bootstrap.min.js"></script>
   <!--

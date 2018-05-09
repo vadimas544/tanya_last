@@ -32,7 +32,7 @@
 		        echo '
 		        <li class="text-center"><a href="../route.php?id=item_1"><img src ='.$row["image"].' width=60% height=60%></a>'.'<p>'.$row["title"].'</p>
 				<p>Цена</p>
-				<button type="button" class="btn btn-success">Купить</button>
+				<button type="button" class="btn btn-success class-to-cart" tid="'.$row["id"].'">Купить</button>
 		        </li>';
 		    	}
 					?>

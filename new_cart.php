@@ -31,36 +31,69 @@
 							';
 							echo '
 									<div class="row">
-										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 text-center">
 											<div id="head1">Изображение</div>
 										</div>
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div id="head2">Наименование товара</div>
 										</div>
-										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 text-center">
 											<div id="head3">Кол-во</div>
 										</div>
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div id="head4">Цена</div>
 										</div>	
 									</div>
-							';	
+							';
+							$servername = "localhost";
+							$username = "shopuser";
+							$password = "shopuser";
+							$dbname = "shop";
+
+							// Create connection
+							$conn = mysqli_connect($servername, $username, $password, $dbname);
+							mysqli_set_charset($conn, "utf8");
+							// Check connection
+							if (!$conn) {
+							    die("Connection failed: " . mysqli_connect_error());
+							}
+
+							$sql = "SELECT * FROM cart, products WHERE cart.cart_ip ='{$_SERVER['REMOTE_ADDR']}' AND products.cat = cart.cart_id_product";
+							$result = mysqli_query($conn, $sql);
+						
+							$row = mysqli_fetch_assoc($result);
+							$img_path = $row['image'];
+							$max_width = 100;
+							$max_height = 100;
+							
+							list($width, $height) = getimagesize($img_path);
+
+							$ratioh = $max_height/$height;
+							$ratiow = $max_width/$width;
+
+							$ratio = min($ratioh, $ratiow);
+							$width = intval($ratio*$width);
+							$height = intval($ratio*$height);
+							/*
+							$int = $row['cart_price'] * $row['cart_count'];	
+							$all_price = $all_price + $int;
+							*/
+							while($row = mysqli_fetch_assoc($result)) {
+
 							echo '
 								<div class="row">
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="img-cart">
-												<p align="center"><img src="" width="" height="" /></p>
+												<p align="center"><img src="'.$row['image'].'" width="'.$width.'" height="'.$height.'" /></p>
 											</div>
 										</div>
 			
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="title-cart">
-												<p><a href="">Трусы мужские</a></p>
-												<p class="mini-cart-features">
-													Мужские<br />
-													Качественные<br />
-													Натуральный хлопок<br />
-												</p>
+												<p><a href="">'.$row['title'].'</a></p>
+												<p class="mini-cart-features">'.
+													$row['description']	
+												.'</p>
 											</div>
 										</div>
 
@@ -88,9 +121,9 @@
 										<div id="bottom-cart-line"></div>
 								</div>
 								';
-
+							}
 								break;
-						
+
 						case 'confirm':
 							echo '
 								<div id="cart-content">
