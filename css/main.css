@@ -359,6 +359,16 @@ footer{
 .delete-cart{
   margin-top: 20px;
 }
+#block-tovar-grid > ul{
+  margin-left: 20px; 
+}
+#block-tovar-grid > li{
+  width: 45%;
+  height: 50%;
+  margin-left: 34px;
+  float: left;
+  list-style-type: none;
+}
 
 @media screen and (max-width: 575px){
   nav{
@@ -391,19 +401,9 @@ footer{
   .cart{
     margin-left: -40px;
   }
-  /*
 }
-#block-tovar-grid > ul{
-  margin-left: 20px; 
-}
-#block-tovar-grid > li{
-  /*border: 1px solid red;
-  width: 45%;
-  height: 50%;
-  margin-left: 34px;
-  float: left;
-  list-style-type: none;
-}
+
+/*
 #block-step{
   height: 70px;
   border-bottom: 1px solid #ccc;

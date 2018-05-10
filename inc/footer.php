@@ -15,44 +15,11 @@
     <script>
       new WOW().init();
     </script>
-    <script>
-      $('.class-to-cart').click(function(){
-          var tid = $(this). attr("tid");
-
-          $.ajax({
-            type: "POST",
-            url: "addtocart.php";
-            data: "id="+tid,
-            dataType: "html",
-            cache: false,
-            success: function(data){
-              loadcart();
-            }
-          });
-      });
-    </script>
+ 
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="js/bootstrap.min.js"></script>
-  <!--
-    <script type="text/javascript">
-      //Allows bootstrap carousels to display 3 items per page rather than just one
-$('.carousel.carousel-multi .item').each(function () {
-  var next = $(this).next();
-  if (!next.length) {
-    next = $(this).siblings(':first');
-  }
-  next.children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
-
-  if (next.next().length > 0) {
-    next.next().children(':first-child').clone().attr("aria-hidden", "true").appendTo($(this));
-  }
-  else {
-    $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
-  }
-});
-    </script>
-  -->
-  		<script>
+    <script src="js/common.js"></script>
+  	<script>
 		$(document).ready(function(){
 			$('.menu-trigger').click(function(){
 				$('nav ul').slideToggle(300);

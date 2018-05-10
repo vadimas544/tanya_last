@@ -45,6 +45,7 @@
 										</div>	
 									</div>
 							';
+
 							$servername = "localhost";
 							$username = "shopuser";
 							$password = "shopuser";
@@ -59,9 +60,15 @@
 							}
 
 							$sql = "SELECT * FROM cart, products WHERE cart.cart_ip ='{$_SERVER['REMOTE_ADDR']}' AND products.cat = cart.cart_id_product";
+
 							$result = mysqli_query($conn, $sql);
-						
+							
 							$row = mysqli_fetch_assoc($result);
+							
+							$sql1 = "SELECT * FROM cart WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'";
+							$result1 = mysqli_query($conn, $sql1);
+							$row1 = mysqli_num_rows($result1);
+							/*
 							$img_path = $row['image'];
 							$max_width = 100;
 							$max_height = 100;
@@ -78,8 +85,12 @@
 							$int = $row['cart_price'] * $row['cart_count'];	
 							$all_price = $all_price + $int;
 							*/
-							while($row = mysqli_fetch_assoc($result)) {
 
+							while($row = mysqli_fetch_assoc($result)) {
+								
+							if($row1 = 0){
+								echo 'Cart is empty';
+							}else{	
 							echo '
 								<div class="row">
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
@@ -122,6 +133,7 @@
 								</div>
 								';
 							}
+						}
 								break;
 
 						case 'confirm':
