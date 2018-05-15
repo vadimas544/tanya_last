@@ -59,15 +59,12 @@
 							    die("Connection failed: " . mysqli_connect_error());
 							}
 
+							$sql = "SELECT * FROM cart INNER JOIN products ON products.cat=cart.cart_id_product";
+							/*
 							$sql = "SELECT * FROM cart, products WHERE cart.cart_ip ='{$_SERVER['REMOTE_ADDR']}' AND products.cat = cart.cart_id_product";
-
+							*/
 							$result = mysqli_query($conn, $sql);
 							
-							$row = mysqli_fetch_assoc($result);
-							
-							$sql1 = "SELECT * FROM cart WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}'";
-							$result1 = mysqli_query($conn, $sql1);
-							$row1 = mysqli_num_rows($result1);
 							/*
 							$img_path = $row['image'];
 							$max_width = 100;
@@ -86,24 +83,20 @@
 							$all_price = $all_price + $int;
 							*/
 
-							while($row = mysqli_fetch_assoc($result)) {
-								
-							if($row1 = 0){
-								echo 'Cart is empty';
-							}else{	
+							while($row = mysqli_fetch_assoc($result)) {	
 							echo '
 								<div class="row">
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="img-cart">
-												<p align="center"><img src="'.$row['image'].'" width="'.$width.'" height="'.$height.'" /></p>
+												<p align="center"><img src="'.$row['cart_id'].'" /></p>
 											</div>
 										</div>
 			
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="title-cart">
-												<p><a href="">'.$row['title'].'</a></p>
+												<p><a href="">'.$row['price'].'</a></p>
 												<p class="mini-cart-features">'.
-													$row['description']	
+													$row['cart_count']	
 												.'</p>
 											</div>
 										</div>
@@ -132,7 +125,7 @@
 										<div id="bottom-cart-line"></div>
 								</div>
 								';
-							}
+							
 						}
 								break;
 

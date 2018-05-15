@@ -4,19 +4,19 @@
 
           $.ajax({
             type: "POST",
-            url: "inc/addtocart.php",
+            url: "../inc/addtocart.php",
             data: "id="+tid,
             dataType: "html",
             cache: false,
             success: function(data){
-             loadcart();
+             alert("Ok");
             }
           });
       });
       function loadcart(){
         $.ajax({
           type: "POST",
-          url: "loadcart.php",
+          url: "../inc/loadcart.php",
           dataType: "html",
           cache: false,
           success: function(data){

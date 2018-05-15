@@ -8,8 +8,6 @@
 
 		$id = $_POST['id'];
 
-		var_dump($id);
-		exit();
 		$conn = mysqli_connect($servername, $username, $password, $dbname);
 		mysqli_set_charset($conn, "utf8");
 
@@ -30,7 +28,7 @@
 			$row = mysqli_fetch_assoc($result);
 
 			$sql = "INSERT INTO cart(cart_id_product, cart_price, cart_datetime, cart_ip) VALUES (
-					'".$row['id']."',
+					'".$row['cat']."',
 					'".$row['price']."',
 					NOW(),
 					'".$_SERVER['REMOTE_ADDR']."'
