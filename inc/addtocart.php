@@ -1,15 +1,10 @@
 <?php
-		if($_SERVER['REQUEST_METHOD'] == "POST")
-	{
-		$servername = "localhost";
-		$username = "shopuser";
-		$password = "shopuser";
-		$dbname = "shop";
+require_once('db.php');
 
 		$id = $_POST['id'];
-
-		$conn = mysqli_connect($servername, $username, $password, $dbname);
-		mysqli_set_charset($conn, "utf8");
+		if($_SERVER['REQUEST_METHOD'] == "POST")
+	{
+		
 
 		$sql ="SELECT * FROM cart WHERE cart_ip = '{$_SERVER['REMOTE_ADDR']}' AND cart_id_product = '$id'";
 

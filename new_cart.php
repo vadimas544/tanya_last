@@ -1,24 +1,26 @@
-<?php require_once('inc/header.php');
-?>
-				<?php
-					$action = $_GET['action'];
-					
-							$servername = "localhost";
-							$username = "shopuser";
-							$password = "shopuser";
-							$dbname = "shop";
-
-							// Create connection
-							$conn = mysqli_connect($servername, $username, $password, $dbname);
-							mysqli_set_charset($conn, "utf8");
-							// Check connection
-							if (!$conn) {
-							    die("Connection failed: " . mysqli_connect_error());
+<?php 
+require_once('inc/header.php');
+require_once('inc/db.php');
+  
+							$action = $_GET['action'];
+							/*
+							$id = $_GET['id'];
+							switch ($action) {
+									case 'clear':
+										$sql = "DELETE FROM cart WHERE cart_ip='{$_SERVER['REMOTE_ADDR']}'";
+										$clear = mysqli_query($conn, $sql);
+										break;
+									case 'delete':
+										$sql = "DELETE FROM cart WHERE cart_id = '$id' AND cart_ip='{$_SERVER['REMOTE_ADDR']}'";
+										$delete =mysqli_query($conn, $sql);
+										break;
 							}
+							*/
 							
 							$sql = "SELECT * FROM cart, products WHERE cart.cart_ip ='{$_SERVER['REMOTE_ADDR']}' AND products.id = cart.cart_id_product";
 							
 							$result = mysqli_query($conn, $sql);
+
 							
 							
 							$img_path = $row['image'];
@@ -34,8 +36,12 @@
 							$width = intval($ratio*$width);
 							$height = intval($ratio*$height);
 							$row_cnt = mysqli_num_rows($result);
+							
+							
+							
 							if($row_cnt > 0){
 								switch ($action) {
+									
 									case 'oneclick':
 							echo '
 							<div id="cart-content">
@@ -124,14 +130,14 @@
 													<div class="price-product"><h5><span class="span-count">1</span>x<span>15 000</span></h5><p>15 000</p></div>
 												</div>
 												<div class="col-lg-2">
-													<div class="delete-cart"><a href=""><img src="../img/del.png" /></a></div>
+													<div class="delete-cart"><a href="cart.php?id='.$row['cart_id'].'&action=delete"><img src="../img/del.png" /></a></div>
 												</div>
 										<div id="bottom-cart-line"></div>
 								</div>
 								';
 						}	
 							echo '
-								<h2 class="itog-price" align="right">Итого: <strong>'.$all_price.'</strong> грн</h2>
+								<h2 class="itog-price" align="right">Итого: <strong>'.$int.'</strong> грн</h2>
 								<p align="right" class="button-next"><a href="new_cart.php?action=confirm">Далее</a></p>
 							';
 								break;
@@ -192,11 +198,11 @@
 							';
 							
 							break;
-					}
-				}
-					else{
+						}
+					}else{
 						echo '<h3 id="clear-cart" align="center">Корзина пуста</h3>';
 					}
+					
 				?>
 			</div>
 		</div>
