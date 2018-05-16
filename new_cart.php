@@ -1,9 +1,42 @@
-<?php require_once('inc/header.php'); ?>
+<?php require_once('inc/header.php');
+?>
 				<?php
 					$action = $_GET['action'];
-					switch ($action) {
-						case 'oneclick':
-						
+					
+							$servername = "localhost";
+							$username = "shopuser";
+							$password = "shopuser";
+							$dbname = "shop";
+
+							// Create connection
+							$conn = mysqli_connect($servername, $username, $password, $dbname);
+							mysqli_set_charset($conn, "utf8");
+							// Check connection
+							if (!$conn) {
+							    die("Connection failed: " . mysqli_connect_error());
+							}
+							
+							$sql = "SELECT * FROM cart, products WHERE cart.cart_ip ='{$_SERVER['REMOTE_ADDR']}' AND products.id = cart.cart_id_product";
+							
+							$result = mysqli_query($conn, $sql);
+							
+							
+							$img_path = $row['image'];
+							$max_width = 100;
+							$max_height = 100;
+							
+							list($width, $height) = getimagesize($img_path);
+
+							$ratioh = $max_height/$height;
+							$ratiow = $max_width/$width;
+
+							$ratio = min($ratioh, $ratiow);
+							$width = intval($ratio*$width);
+							$height = intval($ratio*$height);
+							$row_cnt = mysqli_num_rows($result);
+							if($row_cnt > 0){
+								switch ($action) {
+									case 'oneclick':
 							echo '
 							<div id="cart-content">
 								<div class="container-fluid">
@@ -29,6 +62,11 @@
 								</div>
 							</div>
 							';
+							
+
+							
+							
+							
 							echo '
 									<div class="row">
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 text-center">
@@ -46,58 +84,24 @@
 									</div>
 							';
 
-							$servername = "localhost";
-							$username = "shopuser";
-							$password = "shopuser";
-							$dbname = "shop";
-
-							// Create connection
-							$conn = mysqli_connect($servername, $username, $password, $dbname);
-							mysqli_set_charset($conn, "utf8");
-							// Check connection
-							if (!$conn) {
-							    die("Connection failed: " . mysqli_connect_error());
-							}
-
-							$sql = "SELECT * FROM cart INNER JOIN products ON products.cat=cart.cart_id_product";
-							/*
-							$sql = "SELECT * FROM cart, products WHERE cart.cart_ip ='{$_SERVER['REMOTE_ADDR']}' AND products.cat = cart.cart_id_product";
-							*/
-							$result = mysqli_query($conn, $sql);
 							
-							/*
-							$img_path = $row['image'];
-							$max_width = 100;
-							$max_height = 100;
-							
-							list($width, $height) = getimagesize($img_path);
-
-							$ratioh = $max_height/$height;
-							$ratiow = $max_width/$width;
-
-							$ratio = min($ratioh, $ratiow);
-							$width = intval($ratio*$width);
-							$height = intval($ratio*$height);
-							/*
-							$int = $row['cart_price'] * $row['cart_count'];	
-							$all_price = $all_price + $int;
-							*/
 
 							while($row = mysqli_fetch_assoc($result)) {	
+							$int = $row['cart_price'] * $row['cart_count'];
+							$all_price = 0;	
+							$all_price = $all_price + $int;
 							echo '
 								<div class="row">
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="img-cart">
-												<p align="center"><img src="'.$row['cart_id'].'" /></p>
+												<p align="center"><img src="'.$row['image'].'" width="'.$width.'" height="'.$height.'" /></p>
 											</div>
 										</div>
 			
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="title-cart">
-												<p><a href="">'.$row['price'].'</a></p>
-												<p class="mini-cart-features">'.
-													$row['cart_count']	
-												.'</p>
+												<p><a href="">'.$row['title'].'</a></p>
+												<p class="mini-cart-features"></p>
 											</div>
 										</div>
 
@@ -125,10 +129,13 @@
 										<div id="bottom-cart-line"></div>
 								</div>
 								';
-							
-						}
+						}	
+							echo '
+								<h2 class="itog-price" align="right">Итого: <strong>'.$all_price.'</strong> грн</h2>
+								<p align="right" class="button-next"><a href="new_cart.php?action=confirm">Далее</a></p>
+							';
 								break;
-
+					
 						case 'confirm':
 							echo '
 								<div id="cart-content">
@@ -157,7 +164,6 @@
 							';
 							
 							break;
-
 						case 'completion':
 							echo '
 							<div id="cart-content">
@@ -186,6 +192,10 @@
 							';
 							
 							break;
+					}
+				}
+					else{
+						echo '<h3 id="clear-cart" align="center">Корзина пуста</h3>';
 					}
 				?>
 			</div>

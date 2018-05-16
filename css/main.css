@@ -356,6 +356,10 @@ footer{
   height: 22px;
   font: 15px sans-serif;
 }
+.input-count-style p{
+  cursor: pointer;
+  margin: 1px;
+}
 .delete-cart{
   margin-top: 20px;
 }

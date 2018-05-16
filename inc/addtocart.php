@@ -28,7 +28,7 @@
 			$row = mysqli_fetch_assoc($result);
 
 			$sql = "INSERT INTO cart(cart_id_product, cart_price, cart_datetime, cart_ip) VALUES (
-					'".$row['cat']."',
+					'".$row['id']."',
 					'".$row['price']."',
 					NOW(),
 					'".$_SERVER['REMOTE_ADDR']."'
