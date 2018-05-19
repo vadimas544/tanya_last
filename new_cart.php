@@ -199,7 +199,7 @@ require_once('inc/db.php');
 												<p>Шаг 1 из 3</p>
 											</div>
 											<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 text-center reset">
-												<a href="cart.php?action=clear">Очистить</a>
+												<a href="new_cart.php?action=clear">Очистить</a>
 											</div>
 										</div>
 										</div>
@@ -227,7 +227,7 @@ require_once('inc/db.php');
 										<p>Шаг 1 из 3</p>
 									</div>
 									<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 text-center reset">
-										<a href="cart.php?action=clear">Очистить</a>
+										<a href="new_cart.php?action=clear">Очистить</a>
 									</div>
 								</div>
 								</div>
@@ -307,7 +307,7 @@ require_once('inc/db.php');
 													<div class="price-product"><h5><span class="span-count">1</span>x<span>15 000</span></h5><p>15 000</p></div>
 												</div>
 												<div class="col-lg-2">
-													<div class="delete-cart"><a href="cart.php?id='.$row['cart_id'].'&action=delete"><img src="../img/del.png" /></a></div>
+													<div class="delete-cart"><a href="new_cart.php?id='.$row['cart_id'].'&action=delete"><img src="../img/del.png" /></a></div>
 												</div>
 										<div id="bottom-cart-line"></div>
 								</div>
