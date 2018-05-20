@@ -565,3 +565,12 @@ footer{
   border-bottom: 2px solid grey; 
 }
 */
+.form-error{
+  color: red;
+}
+.form-success{
+  color: green;
+}
+.input-error{
+  box-shadow: 0 0 5px red;
+}

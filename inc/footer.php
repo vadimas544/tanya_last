@@ -18,6 +18,8 @@
  
     <script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
     <script src="js/common.js"></script>
   	<script>
 		$(document).ready(function(){

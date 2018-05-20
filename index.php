@@ -2,6 +2,36 @@
   require_once('inc/header.php');
 ?>
 
+<?php
+/*
+   require_once("inc/db.php");
+   session_start();
+
+   if($_POST['submit']){
+
+    $error = [];
+
+    if(!$_POST['name']) $error[] = "Укажите имя";
+
+    if(!preg_match("/^([a-z0-9_\.-]+)@([a-z0-9_\.-]+)\.([a-z\.]{2,6})$/", $_POST['email'])) $error[] = "Укажите корректный E-mail";
+
+    if(!$_POST['subject']) $error[] = "Укажите тему письма";
+
+    if(count($error))
+    {
+      $_SESSION['message'] = "<p id='form-error'>" . implode('<br />', $error) . "</p>";
+    }else
+    {
+      send_mail($_POST['email'], 'vadim123544@gmail.com',$_POST['subject'], $_POST['text']);
+
+      $_SESSION['message'] = "<p id='form-success'>Ваше сообщение успешно отправлено</p>";
+
+    }
+
+   }
+   */
+?>
+
       <header>
           <div class="row">
             <div class="col-md-12">
@@ -161,23 +191,20 @@
         			<h1 class="wow bounceInUp" data-wow-delay="0s" data-wow-duration="2s" data-wow-offset="50">Get in Touch</h1>
         			<img class="img-responsive" src="img/2.jpg" alt="Photo">
         			<p>tatjana19rjabokon@gmail.com<br />0938919595</p>
-              <?php 
-                if(isset($_SESSION['message'])){
-                  echo $_SESSION['message'];
-                  unset($_SESSION['message']);
-                }
-              ?>
-        			<form action="/inc/feedback.php" method="post">
+
+              <div id="form-messages">
+              </div>
+        			<form id="form">
         				<div class="form-group">
         					<div class="col-md-6">
-        							<input type="text" class="form-control" width="50" placeholder="Name*" name="name"><br />
-        							<input type="email" class="form-control" placeholder="Email*" name="email"><br />
-        							<input type="text" class="form-control" name="subject" placeholder="Subject"><br />	
+        							<input type="text" class="form-control" width="50" placeholder="Name*" name="name" id="name"><br />
+        							<input type="email" class="form-control" placeholder="Email*" name="email" id="email"><br />
+        							<input type="text" class="form-control" name="subject" placeholder="Subject" id="subject"><br />	
         						<div class="form-group">
-      								<textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+      								<textarea class="form-control" rows="3" id="comment" name="text"></textarea>
     							</div>
         						<br />
-        						<input type="submit" class="btn btn-secondary" name="submit" value="Send">
+        						<button class="btn btn-secondary">Send</button>
         					</div>
         				</div>
         			</form>
