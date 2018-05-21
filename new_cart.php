@@ -59,9 +59,11 @@ require_once('inc/db.php');
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div id="head2">Наименование товара</div>
 										</div>
+										<!--
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 text-center">
 											<div id="head3">Кол-во</div>
 										</div>
+										-->
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div id="head4">Цена</div>
 										</div>	
@@ -110,7 +112,7 @@ require_once('inc/db.php');
 												<p class="mini-cart-features"></p>
 											</div>
 										</div>
-
+										<!--
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="count-cart">
 												<ul class="input-count-style">
@@ -124,7 +126,8 @@ require_once('inc/db.php');
 														<p align="center" class="count-plus">+</p>
 													</li>
 											</div>
-											</div>
+										</div>
+										-->
 												
 												<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 													<div class="price-product"><h5><span class="span-count">1</span>x<span>15 000</span></h5><p>15 000</p></div>
@@ -287,7 +290,7 @@ require_once('inc/db.php');
 												<p class="mini-cart-features"></p>
 											</div>
 										</div>
-
+										<!--
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div class="count-cart">
 												<ul class="input-count-style">
@@ -301,7 +304,8 @@ require_once('inc/db.php');
 														<p align="center" class="count-plus">+</p>
 													</li>
 											</div>
-											</div>
+										</div>
+										-->
 												
 												<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 													<div class="price-product"><h5><span class="span-count">1</span>x<span>15 000</span></h5><p>15 000</p></div>
