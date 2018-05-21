@@ -1,5 +1,9 @@
 <?php
   require_once('inc/header.php');
+  $name = '';
+  $email = '';
+  $subject = '';
+  $text = '';
 ?>
 
 <?php
@@ -192,19 +196,19 @@
         			<img class="img-responsive" src="img/2.jpg" alt="Photo">
         			<p>tatjana19rjabokon@gmail.com<br />0938919595</p>
 
-              <div id="form-messages">
+              <div id="results">
               </div>
-        			<form id="form">
+        			<form id="form" method="post" action="">
         				<div class="form-group">
         					<div class="col-md-6">
         							<input type="text" class="form-control" width="50" placeholder="Name*" name="name" id="name"><br />
         							<input type="email" class="form-control" placeholder="Email*" name="email" id="email"><br />
         							<input type="text" class="form-control" name="subject" placeholder="Subject" id="subject"><br />	
         						<div class="form-group">
-      								<textarea class="form-control" rows="3" id="comment" name="text"></textarea>
+      								<textarea class="form-control" rows="3" id="text" name="text"></textarea>
     							</div>
         						<br />
-        						<button class="btn btn-secondary">Send</button>
+        						<button class="btn btn-secondary" name="submit" id="submit" onclick="return post();">Send</button>
         					</div>
         				</div>
         			</form>

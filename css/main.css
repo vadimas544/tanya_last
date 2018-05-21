@@ -564,13 +564,18 @@ footer{
   width: 1431px;
   border-bottom: 2px solid grey; 
 }
-*/
-.form-error{
-  color: red;
-}
+
+
 .form-success{
   color: green;
 }
 .input-error{
   box-shadow: 0 0 5px red;
+}
+*/
+.form-error{
+  margin-left: 20px;
+  color: black;
+  font: 18px solid sans-serif;
+  font-weight: bold;
 }
