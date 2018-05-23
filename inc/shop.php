@@ -25,7 +25,7 @@
 					</div>
 					<div class="col-md-4">
 						<div class="item-shop">
-							<a href=""><img src="../img/shop3.jpg" alt="shop" class="image"></a>
+							<a href="../route.php?id=shirts"><img src="../img/shop3.jpg" alt="shop" class="image"></a>
 						  		<div class="overlay text-center">
    									<div class="text">Quick view</div>
  								 </div>

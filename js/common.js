@@ -9,7 +9,7 @@
             dataType: "html",
             cache: false,
             success: function(data){
-             alert("Ok");
+             alert("Товар добавлен в корзину!");
             }
           });
       });

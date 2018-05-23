@@ -7,6 +7,8 @@
 		require_once("inc/blog.php");
 	} elseif ($_GET['id'] == 'panties'){
 		require_once("inc/panties.php");
+	}elseif ($_GET['id'] == 'shirts'){
+		require_once("inc/shirts.php");
 	} elseif ($_GET['id'] == 'item_1'){
 		require_once("inc/item1.php");
 	}

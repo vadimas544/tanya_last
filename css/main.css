@@ -317,7 +317,7 @@ footer{
     height: 200px;
     width: 100%;
     background: #ccc;
-    margin-top: 200px;
+    margin-top: 10px;
 }
 .cart-top{
   margin-left: -56px;
@@ -390,16 +390,16 @@ footer{
   margin-top: 30px;
 }
 
-@media screen and (max-width: 575px){
+@media screen and (max-width: 645px){
   nav{
     width: 100%;
   }
   nav li{
     display: block;
-    width: 174%;
+    width: 196%;
     text-align: center;
     background-color: #B88B7F;
-    margin-left: -37%;
+    margin-left: -55%;
     margin-top: 0px;
   }
   nav ul{
@@ -420,6 +420,16 @@ footer{
 
   .cart{
     margin-left: -40px;
+  }
+}
+@media screen and (min-width: 400px) and (max-width: 550px){
+  nav li{
+    display: block;
+    width: 204%;
+    text-align: center;
+    background-color: #B88B7F;
+    margin-left: -61%;
+    margin-top: 0px;
   }
 }
 

@@ -171,7 +171,7 @@ require_once('inc/db.php');
 											</div>
 										<div class="row">
 											<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 text-left step">
-												<p>Шаг 1 из 3</p>
+												<p>Шаг 2 из 3</p>
 											</div>
 											<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 text-center reset">
 												<a href="cart.php?action=clear">Очистить</a>
@@ -199,7 +199,7 @@ require_once('inc/db.php');
 											</div>
 										<div class="row">
 											<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 text-left step">
-												<p>Шаг 1 из 3</p>
+												<p>Шаг 3 из 3</p>
 											</div>
 											<div class="col-lg-4 col-md-6 col-sm-6 col-xs-6 text-center reset">
 												<a href="new_cart.php?action=clear">Очистить</a>
@@ -244,9 +244,11 @@ require_once('inc/db.php');
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div id="head2">Наименование товара</div>
 										</div>
+										<!--
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3 text-center">
 											<div id="head3">Кол-во</div>
 										</div>
+										-->
 										<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
 											<div id="head4">Цена</div>
 										</div>	

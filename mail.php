@@ -36,10 +36,10 @@
 
         if(mail($toEmail, $subjec, $body, $headers)){
           // Email Sent
-          echo "<script>alert('Your message sent!!!')</script>";
+          echo "<script>alert('Ваше сообщение отправлено!!!')</script>";
         } else {
           // Failed
-          echo "<script>alert('Your message not sent!!!')</script>";
+          echo "<script>alert('Сообщение не отправлено!')</script>";
         }
       }
 	
