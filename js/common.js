@@ -9,26 +9,11 @@
             dataType: "html",
             cache: false,
             success: function(data){
-             alert("Товар добавлен в корзину!");
+             loadcart();
             }
           });
       });
-      function loadcart(){
-        $.ajax({
-          type: "POST",
-          url: "../inc/loadcart.php",
-          dataType: "html",
-          cache: false,
-          success: function(data){
-            if(data == 0){
-              $('.cart' > a).html("Cart is empty");
-            }else{
-              $('.cart' > a).html(data);
-            }
-          }
-
-        });
-      }
+      
 
      
 
@@ -48,6 +33,22 @@
           });
         
           return false;
+      }
+      function loadcart(){
+        $.ajax({
+          type: "POST",
+          url: "../inc/loadcart.php",
+          dataType: "html",
+          cache: false,
+          success: function(data){
+            if(data == "0"){
+              $(".cart i").html("Cart is empty");
+            }else{
+              $(".cart i").html(data);
+            }
+          }
+
+        });
       }
 
 
