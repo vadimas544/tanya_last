@@ -345,7 +345,7 @@ footer{
   font: bold 14px sans-serif;
   border-bottom: 1px dashed green;
 }
-.count-cart li{
+.count-cart p{
   margin-top: 10px;
   list-style-type: none;
 }

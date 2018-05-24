@@ -9,6 +9,7 @@
             dataType: "html",
             cache: false,
             success: function(data){
+             /*loadcart();*/
              loadcart();
             }
           });
